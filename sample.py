@@ -8,17 +8,18 @@ from Models.Artifacts.Sets import ViridescentVenerer4Set
 
 def generate_artifact(x):
     a = Artifact()
-    a.elemental_damage_bonus_weight += 8
-    
+    c = 3 - x[1] - x[4]
+    if c > 0:
+        a.attack_constant_weight += c
+
     a.attack_bonus_weight += x[0]
     a.elemental_mastery_weight += x[1]
     a.critical_rate_weight += x[2]
     a.critical_damage_weight += x[3]
+    a.elemental_damage_bonus_weight += x[4] * 8
     return a
 
 def f(x):
-    if sum(x) != 69 - 8:
-        return 1
     a = generate_artifact(x)
     if a.is_valid() == False:
         return 1
@@ -36,7 +37,8 @@ def optimize():
     ranges = (slice(0, a.max_legal_weight(3) + 1, 1),
               slice(0, a.max_legal_weight(3) + 1, 1),
               slice(0, a.max_legal_weight(1) + 1, 1),
-              slice(0, a.max_legal_weight(1) + 1, 1))
+              slice(0, a.max_legal_weight(1) + 1, 1),
+              slice(0, 1 + 1, 1))
     return brute(f, ranges, finish = None)
 
 def generate_character(a):
