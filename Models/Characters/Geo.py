@@ -12,6 +12,7 @@ class Noelle(Character):
     @property
     def attack(self):
         if self.__enable_effect:
-            return super().attack + super().defense * 1.42
+            # estimated lv15 skill: https://bbs.nga.cn/read.php?tid=23915817
+            return super().attack + super().defense * 1.46
         else:
             return super().attack

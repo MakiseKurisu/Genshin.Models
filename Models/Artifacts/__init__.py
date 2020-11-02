@@ -227,7 +227,7 @@ class Artifact(Model):
                  self.elemental_damage_bonus_weight, self.physical_damage_bonus_weight, \
                  self.critical_rate_weight, self.critical_damage_weight, self.healing_bonus_weight) if i >= 8) < 3:
                 if print_reason:
-                    print(f"is_valid:6")
+                    print(f"At least 3 stats need to have weight over 8 to become main stats.")
                 return False
             else:
                 return True
