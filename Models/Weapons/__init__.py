@@ -4,8 +4,9 @@ class Weapon(Model):
     def __init__(self, lv1_attack):
         super().__init__()
         if lv1_attack == 41:
-            # estimated
-            self.attack_base += 470
+            # unverified
+            # https://bbs.nga.cn/read.php?tid=24038793
+            self.attack_base += 454
         elif lv1_attack == 42:
             # unverified
             # https://bbs.nga.cn/read.php?tid=24038793
