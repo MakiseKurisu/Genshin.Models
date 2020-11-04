@@ -18,6 +18,10 @@ class Weapon(Model):
             # verified
             # energy_recharge 0.12->0.551
             self.attack_base += 608
+        elif lv1_attack == 48:
+            # unverified
+            # https://bbs.nga.cn/read.php?tid=24038793
+            self.attack_base += 674
         else:
             raise ValueError(f"Unknown weapon level 1 attack {lv1_attack}.")
 
