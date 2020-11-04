@@ -4,11 +4,16 @@ class Weapon(Model):
     def __init__(self, lv1_attack):
         super().__init__()
         if lv1_attack == 41:
-            self.attack_base += 542
+            # estimated
+            self.attack_base += 470
         elif lv1_attack == 42:
-            self.attack_base += 555
+            # unverified
+            # https://bbs.nga.cn/read.php?tid=24038793
+            self.attack_base += 510
         elif lv1_attack == 44:
-            self.attack_base += 582
+            # unverified
+            # https://bbs.nga.cn/read.php?tid=24038793
+            self.attack_base += 565
         elif lv1_attack == 46:
             # verified
             # energy_recharge 0.12->0.551
