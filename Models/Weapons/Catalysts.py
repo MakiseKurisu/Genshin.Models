@@ -15,3 +15,10 @@ class MappaMare(Weapon):
         self.elemental_mastery += 110
         if enable_effect:
             self.elemental_damage_bonus += 0.32
+
+class SacrificialFragments(Weapon):
+    def __init__(self, enable_effect = True):
+        super().__init__(41)
+        self.elemental_mastery += 220
+        if enable_effect:
+            self.elemental_damage_bonus += 0.32
