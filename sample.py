@@ -40,7 +40,7 @@ def generate_character(a):
 
 def damage_model(c):
     # estimated lv10 / lv15 talent: https://bbs.nga.cn/read.php?tid=23915817
-    return ( 0.5 * (0.335 + 0.306 + 0.384 + 0.479) / 4 * 2.4 * c.damage_expectation, 2 * c.swirl_damage_expectation )
+    return ( c.damage_expectation, )
 
 def main():
     x = [24, 21, 16, 1, 0]

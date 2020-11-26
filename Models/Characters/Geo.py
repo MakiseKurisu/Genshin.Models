@@ -5,8 +5,9 @@ class Noelle(Character):
         super().__init__()
         self.__enable_effect = enable_effect
         
-        self.attack_base += 221
-        self.defense_base += 823
+        self.health_base += 12071
+        self.attack_base += 191
+        self.defense_base += 799
         self.defense_bonus += 0.3
 
     @property

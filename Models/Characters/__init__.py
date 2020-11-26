@@ -1,5 +1,6 @@
 from Models import Model
 
+# Character base stats: https://genshin.honeyhunterworld.com/db/char/characters/
 class Character(Model):
     def __init__(self):
         super().__init__()
